@@ -2,7 +2,7 @@ from dp_equality import *
 import sys
 import unittest
 arr = [3, 34, 4, 12, 5, 2]
-
+arr2 = [2]
 
 class Test(unittest.TestCase):
     def test_rec_subset(self):
@@ -13,6 +13,7 @@ class Test(unittest.TestCase):
         self.assertEqual(rec_subset(arr, len(arr) - 1, 13), False)
 
     def test_dp_subset(self):
+        self.assertEqual(dp_subset(arr2, 2), True)
         self.assertEqual(dp_subset(arr, 9) ,True)
         self.assertEqual(dp_subset(arr, 10), True)
         self.assertEqual(dp_subset(arr, 11), True)
